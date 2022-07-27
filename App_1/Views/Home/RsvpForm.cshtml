@@ -1,0 +1,210 @@
+﻿@model PartyInvites.Models.GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+    body{
+        background-color: #27272C !important;
+    }
+    
+    h1{
+        text-align: center;
+        position: relative;
+        font-size: 20px;
+        color: #AB79D6;
+        outline-width: 2px !important; 
+        box-shadow: 0 1px 0 lightblue;
+        font-family: 'Brewski - Original';
+        line-height: 120%;
+    }
+    
+    /* INPUT STYLING */
+
+    input{
+        color: #C5C5CE;
+        background-color: #27272C !important; 
+        border-radius: 5px;
+    }
+    
+        input[type=text], textarea {
+          -webkit-transition: all 0.30s ease-in-out;
+          -moz-transition: all 0.30s ease-in-out;
+     
+          -o-transition: all 0.30s ease-in-out;
+          outline: none;
+          padding: 3px 0px 3px 3px;
+          margin: 5px 1px 3px 0px;
+          border: 1px solid #DDDDDD;
+        }
+ 
+        input[type=text]:focus, textarea:focus {
+          box-shadow: 0 0 5px #AB79D6;
+          padding: 3px 0px 3px 3px;
+          margin: 5px 1px 3px 0px;
+          border: 1px solid #AB79D6;
+        }
+
+
+    /* END OF INPUT STYLING */
+
+    /* BUTTON STYLING */
+
+    .button{
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 2px #120;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .submitButton{
+        background-color: #AB79D6;
+        color: black;
+        border: 2px solid #351D4A;
+    }
+
+    .submitButton:hover{
+        background-color: #351D4A;
+        color: white;
+    }
+
+    /* END OF BUTTON STYLING */
+
+    .center{
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .labelDesign{
+        position: relative;
+        text-align: center;
+        padding: 2px;
+        color: #D367C1;
+    }
+
+    .home{
+        position: relative;
+        top: -60px;
+    }
+
+    /* ERROR MESSAGES STYLING */
+    .field-validation-error{
+        color: #62CB5C;
+        font-weight: bold;
+        font-size: 11px;
+        background-color: transparent;
+        outline-color: black;
+    }
+
+    .field-validation-valid{
+        display: none;
+    }
+
+    .text-validation-error{
+        font-weight: bold;
+        color: red;
+        display: none;
+    }
+
+    .input-validation-error{
+        border: 2px solid #00BBCB;
+        outline: solid 1px;
+        background-color: white;
+        animation: shake 0.5s;
+        animation-iteration-count: 1;
+    }
+
+    /* thx w3schools:D */
+    @@keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    .error-msg-div{
+        margin: auto;
+        width: 50%;
+    }
+
+    /* END OF ERROR MESSAGE STYLING AND CUSTOM SHAKE ANIMATION */
+
+    
+
+</style>
+    <meta name="viewport" content="width=device-width" />
+    <title> Invitation Response</title>
+    <link rel="stylesheet" href="/css/home_theme.css"/>
+</head>
+<body>
+    <h1>
+        Please fill in the invite formular!
+    </h1>
+    <br />
+    <div class="home">
+        <a style="border:2px solid #54A550" target="_self" asp-action="Index">Home</a>
+    </div>
+    <form asp-action="RsvpForm" method="post">   
+        <div class="labelDesign">
+            <label asp-for="Name">Your Name</label>
+            <input asp-for="Name"/>
+            <div class="error-msg-div">
+                <span style="outline-color: black" asp-validation-for="Name"></span>
+            </div>
+        </div>
+
+        <div class="labelDesign">
+            <label asp-for="Email">Your Email</label>
+            <input asp-for="Email"/>
+            <div class="error-msg-div">
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+
+        <div class="labelDesign">
+            <label asp-for="Phone">Your Phone</label>
+            <input asp-for="Phone"/>
+            <div class="error-msg-div">
+                <span asp-validation-for="Phone"></span>
+            </div>
+        </div>
+
+        <div class="labelDesign">
+            <label asp-for="WillAttend">Will you come?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes!!!</option>
+                <option value="false">No, I sadly can't make it.</option>
+            </select>
+            <div class="error-msg-div">
+                <span asp-validation-for="WillAttend"></span>
+            </div>
+            <div style = "position:relative; top:4px;">
+                <button class="button submitButton" type="submit">Submit Request</button>
+            </div>
+        </div>
+        
+    </form>
+    <div id="bottomDIV"></div>
+</body>
+</html>

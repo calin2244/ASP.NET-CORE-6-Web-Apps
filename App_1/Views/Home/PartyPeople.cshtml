@@ -1,0 +1,107 @@
+﻿@model IEnumerable<PartyInvites.Models.GuestResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+</head>
+<style>
+
+    body{
+        background-color: #27272C;
+    }
+
+    table{
+        border-collapse: collapse;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    th{
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 40px;
+        border: 2px solid #AB79D6;
+    }
+
+    td{
+        padding-top: -5px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 40px;
+        border: 2px solid #AB79D6;
+    }
+
+    h1{
+        font-size: 15px;
+        font-family: 'Brewski - Original';
+        color: white;
+    }
+
+    thead{
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    tbody{
+        color: white;
+    }
+
+    a:link{
+    color: purple;
+    background-color: transparent;
+    text-decoration: overline;
+}
+
+    a:visited {
+        color: palevioletred;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+</style>
+<body>
+    <h1>
+        Here's the list of people attending the party! Go <a asp-action="Index" target="_self">Home?</a>
+    </h1>
+    <table>
+        <thead>
+            <tr style="font-family: sans-serif">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(PartyInvites.Models.GuestResponse r in Model!)
+            {
+                <tr>
+                    <td>@r.Name</td>
+                    <td>@r.Email</td>
+                    <td>@r.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

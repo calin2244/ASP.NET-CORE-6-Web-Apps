@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@* See who's attending the party! *@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Calin's Party!</title>
+    <link rel="stylesheet" href="/css/home_theme.css"/>
+</head>
+<body>
+<div class="parent">
+    <h style="color: white">We're going to have a crazy party!</h>
+</div>
+<div style="color: darkgray" class="front-title">
+    (TODO: Add pictures)</br>
+    <a class="RsvpAction" target="_self" asp-action="RsvpForm">Attend the party!</a>
+</div>
+<h1 style="position: relative; text-align: center; bottom: -25px; font-size: 20px; font-weight: bold">
+    <a target="_self" asp-action="PartyPeople">See who's coming!</a>
+</h1>
+<div id="bottomDIV">
+</div>
+</body>
+</html>
