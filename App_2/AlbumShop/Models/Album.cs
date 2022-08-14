@@ -6,7 +6,5 @@ namespace AlbumShop.Models{
         public string ArtistName{get; set;} = String.Empty;
         public string RecordType{get; set;} = String.Empty;
         public decimal? Rating{get; set;}
-
-
     }
 }
