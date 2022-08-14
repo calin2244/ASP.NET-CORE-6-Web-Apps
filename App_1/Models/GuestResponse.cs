@@ -18,6 +18,6 @@ namespace PartyInvites.Models
         public string? Phone { get; set; }
 
         [Required(ErrorMessage = "● Please tell me whether you're coming or not")]
-        public bool? WillAttend { get; set; }
+        public bool? WillAttend {get; set;}
     }
 }
