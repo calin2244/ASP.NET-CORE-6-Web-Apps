@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\programare\\ASP.NET 6\\2\\FirstASP.NETProject\\PartyInvites\\PartyInvites.csproj",
+      "projectUniqueName": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_1\\PartyInvites.csproj",
       "projectName": "PartyInvites",
-      "projectPath": "F:\\programare\\ASP.NET 6\\2\\FirstASP.NETProject\\PartyInvites\\PartyInvites.csproj",
+      "projectPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_1\\PartyInvites.csproj",
       "packagesPath": "C:\\Users\\calin\\.nuget\\packages\\",
-      "outputPath": "F:\\programare\\ASP.NET 6\\2\\FirstASP.NETProject\\PartyInvites\\obj\\",
+      "outputPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\calin\\AppData\\Roaming\\NuGet\\NuGet.Config",
