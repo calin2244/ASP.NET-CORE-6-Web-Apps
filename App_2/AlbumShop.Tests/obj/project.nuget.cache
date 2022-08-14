@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IDdk1R2Hdzc9+5nUDKxFoMHztp0vlynGqHfCK4+PjEAnQ80LYE9hSmIWKzcJRcMySdrspbXvWZxCePaULRmbAw==",
-  "success": true,
-  "projectFilePath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
+  "dgSpecHash": "RLjq+ws/k8Ru+ZsJ/W8L5WRGIn6S6YgvfCYZXDP9az1E553qpx3/YYdRpqOVhxn8LEsmvP/S2omtFM9wcRYdGQ==",
+  "success": false,
+  "projectFilePath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\calin\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\calin\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
@@ -106,5 +106,15 @@
     "C:\\Users\\calin\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\calin\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

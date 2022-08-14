@@ -8,25 +8,25 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AlbumShop
 build_property.RootNamespace = AlbumShop
-build_property.ProjectDir = f:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\
+build_property.ProjectDir = F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = f:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop
+build_property.MSBuildProjectDirectory = F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop
 build_property._RazorSourceGeneratorDebug = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/Index.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/_Layout.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/_ViewImports.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/_ViewStart.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

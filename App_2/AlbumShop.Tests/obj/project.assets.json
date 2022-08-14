@@ -1833,19 +1833,6 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
-      },
-      "AlbumShop/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/AlbumShop.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/AlbumShop.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -6514,16 +6501,11 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
-    },
-    "AlbumShop/1.0.0": {
-      "type": "project",
-      "path": "../AlbumShop/AlbumShop.csproj",
-      "msbuildProject": "../AlbumShop/AlbumShop.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AlbumShop >= 1.0.0",
+      "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "Moq >= 4.16.1",
       "coverlet.collector >= 3.1.2",
@@ -6537,11 +6519,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
+      "projectUniqueName": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
       "projectName": "AlbumShop.Tests",
-      "projectPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
+      "projectPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
       "packagesPath": "C:\\Users\\calin\\.nuget\\packages\\",
-      "outputPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\obj\\",
+      "outputPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\calin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6558,8 +6540,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj": {
-              "projectPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj"
+            "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj": {
+              "projectPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj"
             }
           }
         }
@@ -6617,5 +6599,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

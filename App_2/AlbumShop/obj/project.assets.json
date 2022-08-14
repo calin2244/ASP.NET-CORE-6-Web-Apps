@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj",
+      "projectUniqueName": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj",
       "projectName": "AlbumShop",
-      "projectPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj",
+      "projectPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj",
       "packagesPath": "C:\\Users\\calin\\.nuget\\packages\\",
-      "outputPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\obj\\",
+      "outputPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\calin\\AppData\\Roaming\\NuGet\\NuGet.Config",

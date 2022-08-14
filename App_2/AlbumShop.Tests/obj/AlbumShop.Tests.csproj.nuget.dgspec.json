@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj": {}
+    "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj": {}
   },
   "projects": {
-    "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj": {
+    "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
+        "projectUniqueName": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
         "projectName": "AlbumShop.Tests",
-        "projectPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
+        "projectPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\AlbumShop.Tests.csproj",
         "packagesPath": "C:\\Users\\calin\\.nuget\\packages\\",
-        "outputPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop.Tests\\obj\\",
+        "outputPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\calin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj": {
-                "projectPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj"
+              "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj": {
+                "projectPath": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\AlbumShop.csproj"
               }
             }
           }
@@ -80,63 +80,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj",
-        "projectName": "AlbumShop",
-        "projectPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\AlbumShop.csproj",
-        "packagesPath": "C:\\Users\\calin\\.nuget\\packages\\",
-        "outputPath": "F:\\programare\\ASP.NET 6\\App_2\\AlbumShop\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\calin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
