@@ -6,5 +6,8 @@ namespace AlbumShop.Models{
         }
 
         public IQueryable<Album> Albums => context.Albums;
+        public int AlbumsCount(){
+            return Albums.Count(); 
+        }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlbumShop.Migrations
 {
     [DbContext(typeof(ShopDbContext))]
-    [Migration("20220815175105_Initial")]
+    [Migration("20220816013052_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,11 +26,11 @@ namespace AlbumShop.Migrations
 
             modelBuilder.Entity("AlbumShop.Models.Album", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<long?>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long?>("Id"), 1L, 1);
 
                     b.Property<string>("AlbumName")
                         .IsRequired()
@@ -44,8 +44,11 @@ namespace AlbumShop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("Rating")
+                    b.Property<decimal>("Price")
                         .HasColumnType("decimal(8,2)");
+
+                    b.Property<double?>("Rating")
+                        .HasColumnType("float");
 
                     b.Property<string>("RecordType")
                         .IsRequired()

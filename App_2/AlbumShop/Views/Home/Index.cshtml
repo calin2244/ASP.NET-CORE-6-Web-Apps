@@ -1,4 +1,32 @@
+@model AlbumsListViewModel
+@using System.Globalization
+
+<style>
+     .hborder{
+          border-bottom: solid .75em transparent;
+          margin: 7em auto -0.5em;
+          width: 10em; 
+          height: 2.5em;
+          /*box-shadow: 0 1px 0 -1px black;*/
+          background: padding-box;
+          border-style: solid;
+          border-bottom: solid;
+     }
+</style>
+
 <h1>Welcome to my Album Shop!</h1>
 <div>
      Selling Vinyls, CDS, everything music related!
 </div>
+
+<h2>Our available Albums</h2>
+@foreach (var album in Model?.Albums ?? Enumerable.Empty<Album>())
+{
+     <div>
+          <h3 class = "hborder">@album.AlbumName, by @album.ArtistName</h3>
+          <h4>Price: @album.Price.ToString("c", new CultureInfo("en-EU"))</h4>
+          @album.Description | Rating: @album.Rating stars
+     </div>
+}
+
+<div page-model="@Model?.PageInfo" page-action="Index"></div>

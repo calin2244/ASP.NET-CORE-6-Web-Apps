@@ -12,13 +12,14 @@ namespace AlbumShop.Migrations
                 name: "Albums",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AlbumName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ArtistName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RecordType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Rating = table.Column<decimal>(type: "decimal(8,2)", nullable: true)
+                    Rating = table.Column<double>(type: "float", nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(8,2)", nullable: false)
                 },
                 constraints: table =>
                 {
