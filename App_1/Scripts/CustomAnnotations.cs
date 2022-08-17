@@ -12,7 +12,7 @@ namespace PartyInvites.Scripts
                 this.chars = chars;
             }
 
-            protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
+            protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
             {
                 if (value != null)
                 {
