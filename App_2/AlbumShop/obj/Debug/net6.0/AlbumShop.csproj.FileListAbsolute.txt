@@ -82,3 +82,5 @@ F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\bin\Debug\net6.0\runtime
 F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\obj\Debug\net6.0\AlbumShop.csproj.CopyComplete
 F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\bin\Debug\net6.0\PagedList.dll
 F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\bin\Debug\net6.0\PagedList.Mvc.dll
+F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\bin\Debug\net6.0\libman.json
+F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop\bin\Debug\net6.0\AlbumShop.staticwebassets.runtime.json

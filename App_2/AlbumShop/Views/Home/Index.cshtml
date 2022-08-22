@@ -1,32 +1,159 @@
 @model AlbumsListViewModel
 @using System.Globalization
+@using System.Drawing
 
 <style>
-     .hborder{
-          border-bottom: solid .75em transparent;
-          margin: 7em auto -0.5em;
-          width: 10em; 
-          height: 2.5em;
-          /*box-shadow: 0 1px 0 -1px black;*/
-          background: padding-box;
-          border-style: solid;
-          border-bottom: solid;
+     img {
+          max-width: 100%;
+          max-height: 100%;
      }
+
+     .portrait {
+          height: 200px;
+          width: 200px;
+     }
+
+     .modal-header {
+          padding:9px 15px;
+          border-bottom:3px solid black;
+          -webkit-border-top-left-radius: 5px;
+          -webkit-border-top-right-radius: 5px;
+          -moz-border-radius-topleft: 5px;
+          -moz-border-radius-topright: 5px;
+     }
+
+     .modal-footer{
+          border-top: 3px solid black;
+          padding: 9px 15px;
+     }
+
+     .modal-content  {
+          -webkit-border-radius: 12px !important;
+          -moz-border-radius: 12px !important;
+          border-radius: 12px !important; 
+          border: 6px solid black;
+     }
+
+     .card:focus{
+          color: white;
+     }
+
 </style>
 
+<blockquote>
 <h1>Welcome to my Album Shop!</h1>
 <div>
-     Selling Vinyls, CDS, everything music related!
+     Sending pictures of Vinyls, CDS and everything music related to your e-mail!
 </div>
+</blockquote>
 
-<h2>Our available Albums</h2>
+<!--<h2>Our available Albums:</h2>-->
+<br/>
+@{var modalIndex = "0";}
 @foreach (var album in Model?.Albums ?? Enumerable.Empty<Album>())
-{
-     <div>
-          <h3 class = "hborder">@album.AlbumName, by @album.ArtistName</h3>
-          <h4>Price: @album.Price.ToString("c", new CultureInfo("en-EU"))</h4>
-          @album.Description | Rating: @album.Rating stars
+{    
+     var cardColor = String.Empty;
+     IDictionary<string, string> genreColors = new Dictionary<string, string>();
+
+     switch(@album.Genre){
+          case "Hip-Hop/Rap":
+               cardColor = "card text-white bg-maroon mb-3";
+               genreColors.Add("Hip-Hop/Rap", "#811349");
+               break;
+          case "Alternative/Indie":
+               cardColor = "card text-white bg-indigo mb-3";
+               genreColors.Add("Alternative/Indie", "#6511EB");
+               break;
+          case "Country Music/Pop":
+               cardColor = "card text-white bg-indigo mb-3";
+               genreColors.Add("Country Music/Pop", "#6511EB");
+               break;
+          case "Pop/Punk":
+               cardColor = "card text-white bg-teal mb-3";
+               genreColors.Add("Pop/Punk", "#20c997");
+               break;
+          default:
+               cardColor = "card text-white bg-dark mb-3";
+               genreColors.Add("R&B/Soul", "#32383E");
+               genreColors.Add("Hip-Hop/Pop/Punk", "#32383E");
+               break;
+     }
+
+     <div class="@cardColor" style="color: purple">
+          <div class="card-header">
+               <span class="border border-secondary" style="border-radius: 10px; background-color: #6C757D; color: white; float: left;">
+                    @album.AlbumName by @album.ArtistName
+               </span>
+                    <span style="position: relative; left: 12px">
+                         <button type="button" class="btn bg-white" data-toggle="modal" data-target="#exampleModal-@modalIndex">
+                              More info
+                         </button>
+                         <div class="modal fade" id="exampleModal-@modalIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-@modalIndex" aria-hidden="true" style="color: black">
+                              <div class="modal-dialog modal-lg" role="document">
+                                   <div class="modal-content">
+                                        <div class="modal-header" style="background-color: @genreColors[@album.Genre]">
+                                             <h5 class="modal-title" id="exampleModalLabel-@modalIndex" style="font-weight: bold; color: white">
+                                                  <span>
+                                                       🌸@album.AlbumName, @album.ArtistName🌸
+                                                  </span>
+                                             </h5>
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                             </button>
+                                        </div>
+                                        <div class="modal-body">   
+                                             <section style="float: right; border: 3px solid black; border-radius: 12px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                                       <img src="@album.CoverLink" style="border-radius: 12px"/>
+                                                       <section style="position: relative; font-weight: bold; text-decoration: none; border: 1px solid black; background: white; top: -10px; width: 150px; thext-align: center; left: 20px">                                                           
+                                                                 <div style="text-align: center">
+                                                                      @album.AlbumName.ToUpper()
+                                                                 </div>
+                                                       </section>
+                                             </section>  
+                                                 
+                                             <div style="padding-top: 50px; padding-bottom: 8px">
+                                                  <iframe style="border-radius:12px; border: 3px black solid" src="@album.SpotifyEmbed" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                             </div>
+                                        </div>
+                                        <div class="modal-footer" style="background-color: @genreColors[@album.Genre]">
+                                             <span style="float: left; font-weight: bold; color: white">
+                                                  @album.RecordLabel
+                                             </span>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </span>
+               <span class="badge rounded-pill bg-primary text-white" style="float: right; height: 2em; width: 5em; font-size: 15px">
+                    <small>@album.Price.ToString("c", new CultureInfo("fr-FR"))</small>
+               </span>     
+          </div>
+          <div class="bg-faded p-1">
+               <div style="display: inline; font-size: 20px">
+                    <span class="badge rounded-pill bg-warning text-dark" style="float: right">
+                         Rating: @album.Rating⭐
+                    </span>
+                    <span style="float: left; font-weight: bold;">
+                         Genre: @album.Genre
+                    </span>
+               </div>
+               
+          </div>
+          <div class="card-text p-1">@album.Description
+               <span style="float:right; background-color: green">
+                    <button type="button" class="btn btn-success" style="border-radius: 4px">
+                         Add to cart
+                    </button>
+               </span>
+          </div>
      </div>
+     modalIndex = modalIndex+1;
 }
 
-<div page-model="@Model?.PageInfo" page-action="Index"></div>
+<div page-model="@Model?.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
+page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo" 
+class="btn-group pull-right m-1"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

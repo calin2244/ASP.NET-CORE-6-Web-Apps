@@ -4,7 +4,7 @@
 
 namespace AlbumShop.Migrations
 {
-    public partial class Initial : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +19,11 @@ namespace AlbumShop.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RecordType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<double>(type: "float", nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(8,2)", nullable: false)
+                    Price = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
+                    Genre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecordLabelName = table.Column<string>(name: "Record Label Name", type: "nvarchar(max)", nullable: false),
+                    SpotifyEmbedLink = table.Column<string>(name: "Spotify Embed Link", type: "nvarchar(max)", nullable: false),
+                    AlbumCoverLink = table.Column<string>(name: "Album Cover Link", type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

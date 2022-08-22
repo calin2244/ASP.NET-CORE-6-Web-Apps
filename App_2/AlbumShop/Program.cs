@@ -17,6 +17,10 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
+app.MapControllerRoute("pagination",
+    "Albums/Page{prodPage}", new {Controller = "Home", action = "Index"}
+);
+
 app.MapDefaultControllerRoute();
 
 //seed the database when the app starts running

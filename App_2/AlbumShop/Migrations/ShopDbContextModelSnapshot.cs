@@ -38,7 +38,16 @@ namespace AlbumShop.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CoverLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Album Cover Link");
+
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Genre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -48,9 +57,19 @@ namespace AlbumShop.Migrations
                     b.Property<double?>("Rating")
                         .HasColumnType("float");
 
+                    b.Property<string>("RecordLabel")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Record Label Name");
+
                     b.Property<string>("RecordType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SpotifyEmbed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Spotify Embed Link");
 
                     b.HasKey("Id");
 

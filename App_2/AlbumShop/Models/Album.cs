@@ -13,6 +13,15 @@ namespace AlbumShop.Models{
 
         [Column(TypeName = "decimal(8,2)")]
         public decimal Price{get; set;}
-        
+        public string Genre{get; set;} = String.Empty;  
+
+        [Column("Record Label Name")]
+        public string RecordLabel{get; set;} = String.Empty;
+
+        [Column("Spotify Embed Link")]
+        public string SpotifyEmbed{get; set;} = String.Empty;
+
+        [Column("Album Cover Link")]
+        public string CoverLink{get; set;} = String.Empty;
     }
 }
