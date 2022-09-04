@@ -29,9 +29,17 @@ app.MapControllerRoute(
     name: "genre",
     pattern: "{controller=Home}/{prodPage}/{action=Index}"
 );
-app.MapControllerRoute("pagination",
+
+/*app.MapControllerRoute("pagination",
 "Albums/Page{prodPage}",
 new {Controller = "Home", action = "Index", prodPage = 1});
+*/
+
+app.MapControllerRoute(
+    name: "pagination",
+    pattern: "Albums/Page{prodPage}",
+    defaults: new{Controller = "Home", action = "Index", prodPage = 1}
+);
 
 app.MapDefaultControllerRoute();
 
