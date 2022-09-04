@@ -2,6 +2,7 @@
 @using System.Globalization
 @using System.Drawing
 
+
 <style>
      img {
           max-width: 100%;
@@ -36,6 +37,18 @@
 
      .card:focus{
           color: white;
+     }
+
+     .card{
+          border: 2px solid black;
+     }
+
+     .spotifyEmbedLink{
+          border-radius:12px; 
+          border: 3px black solid; 
+          position: absolute; 
+          bottom: -20px;
+          right: 15px;
      }
 
 </style>
@@ -102,22 +115,27 @@
                                              </button>
                                         </div>
                                         <div class="modal-body">   
-                                             <section style="float: right; border: 3px solid black; border-radius: 12px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
-                                                       <img src="@album.CoverLink" style="border-radius: 12px"/>
-                                                       <section style="position: relative; font-weight: bold; text-decoration: none; border: 1px solid black; background: white; top: -10px; width: 150px; thext-align: center; left: 20px">                                                           
+                                             <section style="float: right; border: 3px solid black; border-radius: 14px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                                            <img src="@album.CoverLink" style="border-radius: 12px"/>
+                                                            <span style="position: relative; top: -15px;">                                           
                                                                  <div style="text-align: center">
-                                                                      @album.AlbumName.ToUpper()
+                                                                      <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">Add to cart</button>
                                                                  </div>
-                                                       </section>
+                                                            </span> 
                                              </section>  
+                                             <iframe class="spotifyEmbedLink" src="@album.SpotifyEmbed" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                             
+                                             Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
+                                        Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
                                                  
-                                             <div style="padding-top: 50px; padding-bottom: 8px">
-                                                  <iframe style="border-radius:12px; border: 3px black solid" src="@album.SpotifyEmbed" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                                             </div>
+                                             
                                         </div>
-                                        <div class="modal-footer" style="background-color: @genreColors[@album.Genre]">
-                                             <span style="float: left; font-weight: bold; color: white">
+                                        <div class="modal-footer" style="background-color: @genreColors[@album.Genre]; margin-top: 25px">
+                                             <span style="position: relative; float: left; font-weight: bold; color: white; left: 75px">
                                                   @album.RecordLabel
+                                             </span>
+                                             <span style="position: relative; left: -690px">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 2px solid black">Close</button>
                                              </span>
                                         </div>
                                    </div>
@@ -141,7 +159,7 @@
           </div>
           <div class="card-text p-1">@album.Description
                <span style="float:right; background-color: green">
-                    <button type="button" class="btn btn-success" style="border-radius: 4px">
+                    <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">
                          Add to cart
                     </button>
                </span>
@@ -150,8 +168,9 @@
      modalIndex = modalIndex+1;
 }
 
+@{Model?.CurrentGenre?.Replace("/", "-");}
 <div page-model="@Model?.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
-page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo" 
+page-class-selected="btn-primary" page-url-category="@Model?.CurrentGenre!" page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo" 
 class="btn-group pull-right m-1"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

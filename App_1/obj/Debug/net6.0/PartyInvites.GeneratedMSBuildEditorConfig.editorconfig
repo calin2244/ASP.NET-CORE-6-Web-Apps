@@ -8,45 +8,45 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PartyInvites
 build_property.RootNamespace = PartyInvites
-build_property.ProjectDir = f:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_1\
+build_property.ProjectDir = F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = f:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_1
+build_property.MSBuildProjectDirectory = F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_1
 build_property._RazorSourceGeneratorDebug = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/Index.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/PartyPeople.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/PartyPeople.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0eVBlb3BsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/RsvpForm.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/RsvpForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSc3ZwRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/Thanks.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Home/Thanks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGFua3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Shared/Error.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/_ViewImports.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/_ViewStart.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[f:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Shared/_Layout.cshtml]
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3h9sj1knrp

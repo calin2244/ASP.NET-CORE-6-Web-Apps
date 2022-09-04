@@ -1,0 +1,11 @@
+@model IEnumerable<string>
+<div class="d-grid gap-2">
+    <a class = "btn btn-outline-secondary" asp-action="Index" asp-controller="Home" asp-route-genre=""
+    asp-route-prodPage="1">Home</a>
+    @foreach(string genre in Model ?? Enumerable.Empty<string>()){
+        if(genre.Contains("&"))
+            genre.Replace("&", "-");
+        <a class="btn btn-outline-secondary" asp-action="Index" asp-controller="Home" asp-route-prodPage="1"
+        asp-route-genre="@genre.Replace("/","-")">@genre</a>
+    }
+</div>

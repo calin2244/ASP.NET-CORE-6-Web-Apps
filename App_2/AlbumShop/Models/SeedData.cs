@@ -70,7 +70,7 @@ namespace AlbumShop.Models{
                         Genre = "Hip-Hop/Rap",
                         RecordLabel = "@2019 WUNDERWORLD",
                         SpotifyEmbed = "https://open.spotify.com/embed/album/7dAm8ShwJLFm9SaJ6Yc58O?utm_source=generator&theme=0",
-                        CoverLink = "https://images.genius.com/d3648154d6d90501b1fd53f863ebd4da.933x1000x1.jpg"   
+                        CoverLink = "https://images.genius.com/a6edc3b66b348994bc5217b05909951d.1000x1000x1.png"   
                     },
                     new Album{
                         AlbumName = "Luv Is Rage 2",

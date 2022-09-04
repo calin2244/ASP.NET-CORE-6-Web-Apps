@@ -1,4 +1,5 @@
 using AlbumShop.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AlbumShop.Controllers{
     public class HomeController : Controller{
@@ -9,14 +10,16 @@ namespace AlbumShop.Controllers{
         }
 
         public int pageSize = 3;
-        public IActionResult Index(int prodPage = 1){
+        public ViewResult Index(string? genre, int prodPage = 1){
             return View(new AlbumsListViewModel{
-                Albums = repo.Albums.OrderBy(a => a.Id).Skip((prodPage - 1) * pageSize).Take(pageSize),
+                Albums = repo.Albums.Where(a => genre == null || a.Genre.Replace("/", "-") == genre). 
+                OrderBy(a => a.Id).Skip((prodPage - 1) * pageSize).Take(pageSize),
                 PageInfo = new PageInfo{
                     CurrentPage = prodPage,
                     ItemsPerPage = pageSize,
                     TotalItems = repo.Albums.Count()
-                }
+                },
+                CurrentGenre = genre
             });
         }
     }

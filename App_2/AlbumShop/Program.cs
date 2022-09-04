@@ -17,9 +17,21 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 
-app.MapControllerRoute("pagination",
-    "Albums/Page{prodPage}", new {Controller = "Home", action = "Index"}
+app.MapControllerRoute("catpage",
+"{genre}/Page{prodPage:int}",
+new {Controller = "Home", action = "Index"});
+
+app.MapControllerRoute("page",
+"Page{prodPage:int}",
+new {Controller = "Home", action = "Index", prodPage = 1});
+
+app.MapControllerRoute(
+    name: "genre",
+    pattern: "{controller=Home}/{prodPage}/{action=Index}"
 );
+app.MapControllerRoute("pagination",
+"Albums/Page{prodPage}",
+new {Controller = "Home", action = "Index", prodPage = 1});
 
 app.MapDefaultControllerRoute();
 

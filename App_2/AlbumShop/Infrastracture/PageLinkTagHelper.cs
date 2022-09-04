@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using AlbumShop.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AlbumShop.Infrastracture{
     
@@ -21,6 +22,9 @@ namespace AlbumShop.Infrastracture{
 
         public string? PageAction{get; set;}
 
+        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+        public Dictionary<string, object> PageUrlValues {get; set;} = new Dictionary<string, object>();
+
         public bool PageClassesEnabled{get; set;} = false;
         public string PageClass{get; set;} = String.Empty;
         public string PageClassNormal{get; set;} = String.Empty;
@@ -36,7 +40,8 @@ namespace AlbumShop.Infrastracture{
 
                 for(int i = 1; i <= PageModel.TotalPages; ++i){
                     TagBuilder tag = new TagBuilder("a");
-                    tag.Attributes["href"] = urlHelper.Action(PageAction, new {prodPage = i});
+                    PageUrlValues["prodPage"] = i;
+                    tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
 
                     if(PageClassesEnabled){
                         tag.AddCssClass(PageClass);
