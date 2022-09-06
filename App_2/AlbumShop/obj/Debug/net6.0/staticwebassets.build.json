@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tot8WOfdIxWoLBR02kuN3Q1GnSMsTOwVvCcUEKmzkXo=",
+  "Hash": "rFu9U1hxIVhBRqeixp+x3b1dK3QNrfnMmlSH1mm73EA=",
   "Source": "AlbumShop",
   "BasePath": "_content/AlbumShop",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\wwwroot\\lib\\dist\\css\\calinscss.css",
+      "SourceId": "AlbumShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\wwwroot\\",
+      "BasePath": "_content/AlbumShop",
+      "RelativePath": "lib/dist/css/calinscss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\dist\\css\\calinscss.css"
+    },
+    {
+      "Identity": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\wwwroot\\lib\\dist\\css\\customfonts.css",
+      "SourceId": "AlbumShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\wwwroot\\",
+      "BasePath": "_content/AlbumShop",
+      "RelativePath": "lib/dist/css/customfonts.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\dist\\css\\customfonts.css"
+    },
     {
       "Identity": "F:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\wwwroot\\lib\\dist\\css\\toruskit.bundle.css",
       "SourceId": "AlbumShop",

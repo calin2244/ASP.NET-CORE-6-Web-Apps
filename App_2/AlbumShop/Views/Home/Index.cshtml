@@ -53,12 +53,12 @@
 
 </style>
 
-<blockquote>
-<h1>Welcome to my Album Shop!</h1>
-<div>
-     Sending pictures of Vinyls, CDS and everything music related to your e-mail!
-</div>
-</blockquote>
+<header class="section-header">
+    <div class="section-title title-with-separator">
+        <h1 class="title">Welcome to Calin's Album Shop!</h1>
+    </div>
+    <span class="sub-title">Sending pictures of Vinyls, CDS and everything music related to your e-mail!</span>
+</header>
 
 <!--<h2>Our available Albums:</h2>-->
 <br/>
@@ -170,7 +170,7 @@
 
 @{Model?.CurrentGenre?.Replace("/", "-");}
 <div page-model="@Model?.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
-page-class-selected="btn-primary" page-url-category="@Model?.CurrentGenre!" page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo" 
+page-class-selected="btn-primary" page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo" 
 class="btn-group pull-right m-1"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

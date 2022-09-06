@@ -16401,6 +16401,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\Views\\Home\\Home.cshtml",
+      "TargetPath": "Views\\Home\\Home.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\GitHub Repos\\ASP.NET-CORE-6-Web-Apps\\App_2\\AlbumShop\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

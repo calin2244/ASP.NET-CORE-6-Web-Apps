@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

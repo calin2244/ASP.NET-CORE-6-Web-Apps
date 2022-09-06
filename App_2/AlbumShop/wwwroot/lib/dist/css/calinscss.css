@@ -1,0 +1,140 @@
+.centered{
+    text-align: center;
+}
+
+.to-upper-case{
+    text-transform: uppercase;
+}
+
+.section-header{
+    position: relaitve;
+    text-align: center;
+    z-index: 2;
+    margin-top: 10px;  
+    margin-bottom: 20px;
+}
+
+.section-title{
+    font-size: 40px;
+    font-display: swap;
+}
+
+.title-with-separator{
+    background: url("https://atwoodmagazine.com/wp-content/themes/simplemag-1/images/section-header.png") repeat-x 0 50%;
+    color: black;
+}
+
+.title{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fff;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-style: normal;
+}
+
+.question{
+    display: inline-block;
+    background-color: #fff;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 22px;
+    border-bottom: 1px solid #000; 
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+}
+
+.answer{
+    text-indent: 3em;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    text-transform: none;
+    font-size: 19px;
+}
+
+.sub-title{
+    display: block;
+    clear: both;
+    color: gray;
+    font-family: "JosefinSans-Regular";
+    font-size: 17px;
+}
+
+.section-header, .title{
+    letter-spacing: 0.05em;
+}
+
+.see-catalogue-button{
+    box-sizing: border-box;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    clear: both;
+    font-family: "Josefin Sans";
+    line-height: 300%;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+.see-catalogue{
+    display: block;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100%;
+    text-align: center;
+    color: black;
+}
+
+.see-catalogue:hover{
+    box-shadow: 1px 1px #000, 2px 2px rgb(0, 0, 0), 2px 2px #000;
+    color: hotpink;
+    text-decoration: none;
+}
+
+@keyframes increase_size{
+    0%{box-shadow: 1px 1px #000, 0px 0px rgb(0, 0, 0), 0px 0px #000;}
+    30%{box-shadow: 1px 1px #000, 1px 1px rgb(0, 0, 0), 1px 1px #000;}
+    60%{box-shadow: 1px 1px #000, 2px 2px rgb(0, 0, 0), 2px 2px #000;}
+    100%{box-shadow: 1px 1px #000, 3px 3px rgb(0, 0, 0), 3px 3px #000;}
+}
+
+a:hover,a:active{outline:0}
+
+.button2{
+    box-sizing: border-box;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    clear: both;
+    font-family: "Josefin Sans";
+    line-height: 300%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+.bstrap-button-nav-style{
+    border-radius: 0px; 
+    border: 2px solid black; 
+    position: relative; 
+    width: 100%; 
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.color1{
+    background-color: #e2c4f5;
+}
+
+.color2{
+    background-color: transparent;
+}
