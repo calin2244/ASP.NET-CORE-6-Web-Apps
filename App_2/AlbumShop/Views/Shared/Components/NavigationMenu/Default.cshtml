@@ -7,9 +7,8 @@
         @foreach(string genre in Model ?? Enumerable.Empty<string>()){
             if(genre.Contains("&"))
                 genre.Replace("&", "-");
-            
-                <a class="btn see-catalogue bstrap-button-nav-style @(genre.Replace("/", "-") == ViewBag.SelectedGenre ? "color1": "color2")" asp-action="Index" asp-controller="Home" asp-route-prodPage="1" style="border: 2px solid black; margin-bottom: 10px"
-                asp-route-genre="@genre.Replace("/","-")" target="_self" >@genre</a>
+            <a class="btn see-catalogue bstrap-button-nav-style @(genre.Replace("/", "-") == ViewBag.SelectedGenre ? "color1": "color2")" asp-action="Index" asp-controller="Home" asp-route-prodPage="1" style="border: 2px solid black; margin-bottom: 10px"
+            asp-route-genre="@genre.Replace("/","-")" target="_self" >@genre</a>
         }
     </div>
 </div>

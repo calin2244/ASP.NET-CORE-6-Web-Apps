@@ -1,68 +1,29 @@
 @model AlbumsListViewModel
 @using System.Globalization
-@using System.Drawing
-
-
-<style>
-     img {
-          max-width: 100%;
-          max-height: 100%;
-     }
-
-     .portrait {
-          height: 200px;
-          width: 200px;
-     }
-
-     .modal-header {
-          padding:9px 15px;
-          border-bottom:3px solid black;
-          -webkit-border-top-left-radius: 5px;
-          -webkit-border-top-right-radius: 5px;
-          -moz-border-radius-topleft: 5px;
-          -moz-border-radius-topright: 5px;
-     }
-
-     .modal-footer{
-          border-top: 3px solid black;
-          padding: 9px 15px;
-     }
-
-     .modal-content  {
-          -webkit-border-radius: 12px !important;
-          -moz-border-radius: 12px !important;
-          border-radius: 12px !important; 
-          border: 6px solid black;
-     }
-
-     .card:focus{
-          color: white;
-     }
-
-     .card{
-          border: 2px solid black;
-     }
-
-     .spotifyEmbedLink{
-          border-radius:12px; 
-          border: 3px black solid; 
-          position: absolute; 
-          bottom: -20px;
-          right: 15px;
-     }
-
-</style>
 
 <header class="section-header">
-    <div class="section-title title-with-separator">
-        <h1 class="title">Welcome to Calin's Album Shop!</h1>
-    </div>
-    <span class="sub-title">Sending pictures of Vinyls, CDS and everything music related to your e-mail!</span>
+     <div class="section-title title-with-separator">
+          <h1 class="title">Welcome to Calin's Album Shop!</h1>
+     </div>
+     <span class="sub-title">Sending pictures of Vinyls, CDS and everything music related to your e-mail!</span>
 </header>
+
 
 <!--<h2>Our available Albums:</h2>-->
 <br/>
 @{var modalIndex = "0";}
+
+<main class="card-container">
+     <article class="card">
+          <h1>
+               wow
+          </h1>
+          <div class="card-content">
+               Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+          </div>
+     </article>
+</main>
+
 @foreach (var album in Model?.Albums ?? Enumerable.Empty<Album>())
 {    
      var cardColor = String.Empty;
@@ -127,7 +88,6 @@
                                              
                                              Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
                                         Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
-                                                 
                                              
                                         </div>
                                         <div class="modal-footer" style="background-color: @genreColors[@album.Genre]; margin-top: 25px">
@@ -167,6 +127,36 @@
      </div>
      modalIndex = modalIndex+1;
 }
+
+
+<div class="card-section card-section-third border rounded" style="margin-top: 100px; margin-bottom: 100px">
+     <div class="card-header card-header-third rounded">
+          <h2 class="card-header-title mb-3 text-white">Placeholder</h2>
+     </div>
+     <div class="card-body text-center mb-2">
+               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat malesuada, volutpat fermentum eu ac faucibus pellentesque torquent nullam gravida et, ut nam massa purus congue class mi nunc.</p>
+               <hr>
+          <span><a href="#"><i class="fab fa-bluetooth rounded-circle" aria-hidden="true"></i></a></span>
+          <span><a href="#"><i class="fas fa-wifi rounded-circle" aria-hidden="true"></i></a></span>
+          <span><a href="#"><i class="fas fa-plug rounded-circle" aria-hidden="true"></i></a></span>
+     </div>
+</div>
+
+<div class="card card-custom-wide" style="border: none">
+     <div class="card-custom-wide-img blur-img"></div>
+     <div class="card-custom-wide-img card-header-style div-over-blur-img">
+          Album Name by Artist
+     </div>
+          <div class="card-custom-avatar" style="margin-bottom: 10px;">
+               <img class="img-fluid img-thumbnail thumbnail-image" src="https://edailybuzz.com/wp-content/uploads/2019/04/55837776_2177387922572933_6966676189814663548_n-1069x822.jpg" alt="Avatar" />
+          </div>
+     <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Aries Aries AriesAriesAriesAriesAriesAriesAriesAriesAriesAriesAries</p>
+          <p class="card-text">Some example text. Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie antiopam. At altera facilisis mel.</p>
+     </div>
+</div>
+
 
 @{Model?.CurrentGenre?.Replace("/", "-");}
 <div page-model="@Model?.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 

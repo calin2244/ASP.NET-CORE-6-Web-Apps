@@ -10,6 +10,8 @@ namespace AlbumShop.Components{
 
         public IViewComponentResult Invoke(){
             ViewBag.SelectedGenre = RouteData?.Values["genre"];
+            ViewBag.SelectedPage = RouteData?.Values["prodPage"];
+            ViewBag.SelectedAction = RouteData?.Values["action"];
             return View(repository.Albums.Select(a => a.Genre).Distinct().OrderBy(a => a));
         }
     }
