@@ -8,22 +8,15 @@
      <span class="sub-title">Sending pictures of Vinyls, CDS and everything music related to your e-mail!</span>
 </header>
 
+@foreach (var a in Model?.Albums ?? Enumerable.Empty<Album>()){
+     <partial name="AlbumSummary" model="a"></partial>
+}
 
 <!--<h2>Our available Albums:</h2>-->
 <br/>
-@{var modalIndex = "0";}
+@{var modalIndex = "0"; long Id = 0;}
 
-<main class="card-container">
-     <article class="card">
-          <h1>
-               wow
-          </h1>
-          <div class="card-content">
-               Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </div>
-     </article>
-</main>
-
+@*
 @foreach (var album in Model?.Albums ?? Enumerable.Empty<Album>())
 {    
      var cardColor = String.Empty;
@@ -52,13 +45,56 @@
                genreColors.Add("Hip-Hop/Pop/Punk", "#32383E");
                break;
      }
+*@
+     @* !MODAL STYLE *@ 
+     @*
+     <div class="modal fade" id="exampleModal-@modalIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-@modalIndex" aria-hidden="true" style="color: black">
+          <div class="modal-dialog modal-lg" role="document">
+               <div class="modal-content modal-sizes">
+                    <div class="modal-header" style="background-color: @genreColors[@album.Genre]">
+                         <h5 class="modal-title" id="exampleModalLabel-@modalIndex" style="font-weight: bold; color: white">
+                              <span>
+                                   🌸@album.AlbumName, @album.ArtistName🌸
+                              </span>
+                         </h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="modal-body">   
+                         <section style="float: right; border: 3px solid black; border-radius: 14px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                        <img src="@album.CoverLink" style="border-radius: 12px"/>
+                                        <span style="position: relative; top: -15px;">                                           
+                                             <div style="text-align: center">
+                                                  <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">Add to cart</button>
+                                             </div>
+                                        </span> 
+                         </section>  
+                         <iframe class="spotifyEmbedLink" src="@album.SpotifyEmbed" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                         
+                         Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
+                    Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
+                         
+                    </div>
+                    <div class="modal-footer" style="background-color: @genreColors[@album.Genre]; margin-top: 25px">
+                         <span style="position: relative; float: left; font-weight: bold; color: white; left: 75px">
+                              @album.RecordLabel
+                         </span>
+                         <span style="position: relative; left: -690px">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 2px solid black">Close</button>
+                         </span>
+                    </div>
+               </div>
+          </div>
+     </div>
 
-     <div class="@cardColor" style="color: purple">
-          <div class="card-header">
-               <span class="border border-secondary" style="border-radius: 10px; background-color: #6C757D; color: white; float: left;">
-                    @album.AlbumName by @album.ArtistName
-               </span>
-                    <span style="position: relative; left: 12px">
+     <div class="card card-custom-wide" style="border: none">
+     <div class="card-custom-wide-img blur-img" style="background-image: url('@album.CoverLink');"></div>
+     <div class="card-custom-wide-img card-header-style div-over-blur-img">
+          <span class="div-over-blur-img-txt">
+               @album.AlbumName
+          </span>
+          <span style="position: relative; left: 12px">
                          <button type="button" class="btn bg-white" data-toggle="modal" data-target="#exampleModal-@modalIndex">
                               More info
                          </button>
@@ -102,33 +138,31 @@
                               </div>
                          </div>
                     </span>
-               <span class="badge rounded-pill bg-primary text-white" style="float: right; height: 2em; width: 5em; font-size: 15px">
-                    <small>@album.Price.ToString("c", new CultureInfo("fr-FR"))</small>
-               </span>     
-          </div>
-          <div class="bg-faded p-1">
-               <div style="display: inline; font-size: 20px">
-                    <span class="badge rounded-pill bg-warning text-dark" style="float: right">
-                         Rating: @album.Rating⭐
-                    </span>
-                    <span style="float: left; font-weight: bold;">
-                         Genre: @album.Genre
-                    </span>
-               </div>
-               
-          </div>
-          <div class="card-text p-1">@album.Description
-               <span style="float:right; background-color: green">
-                    <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">
-                         Add to cart
-                    </button>
-               </span>
-          </div>
      </div>
+          <div class="card-custom-avatar" style="margin-bottom: 10px;">
+               <img class="img-fluid img-thumbnail thumbnail-image" src="@album.CoverLink" alt="Avatar" />
+          </div>
+     <div class="card-body">
+          <h4 class="card-title">@album.AlbumName by @album.ArtistName</h4>
+          <p class="card-text">Genre: @album.Genre</p>
+          <p class="card-text">@album.Description</p>
+     </div>
+     <form id="@album.Id" asp-page="/Cart" method="post">
+          <input asp-for="@album.Id"/>
+          <input name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+          <span class="card-text p-1">
+               <button type="submit" style="float: right">
+                    Add to cart
+               </button>
+          </span>
+     </form>
+</div>
+
+     Id++;
      modalIndex = modalIndex+1;
-}
+}*@
 
-
+@*
 <div class="card-section card-section-third border rounded" style="margin-top: 100px; margin-bottom: 100px">
      <div class="card-header card-header-third rounded">
           <h2 class="card-header-title mb-3 text-white">Placeholder</h2>
@@ -142,12 +176,15 @@
      </div>
 </div>
 
-<div class="card card-custom-wide" style="border: none">
+<div class="card card-custom-wide" style="border: none"> 
      <div class="card-custom-wide-img blur-img"></div>
      <div class="card-custom-wide-img card-header-style div-over-blur-img">
-          Album Name by Artist
+          <span class="div-over-blur-img-txt">
+               Album Name by Artist
+          </span>
+
      </div>
-          <div class="card-custom-avatar" style="margin-bottom: 10px;">
+          <div class="card-custom-avatar">
                <img class="img-fluid img-thumbnail thumbnail-image" src="https://edailybuzz.com/wp-content/uploads/2019/04/55837776_2177387922572933_6966676189814663548_n-1069x822.jpg" alt="Avatar" />
           </div>
      <div class="card-body">
@@ -155,13 +192,12 @@
           <p class="card-text">Aries Aries AriesAriesAriesAriesAriesAriesAriesAriesAriesAriesAries</p>
           <p class="card-text">Some example text. Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie antiopam. At altera facilisis mel.</p>
      </div>
-</div>
+</div> *@
+
+
 
 @{Model?.CurrentGenre?.Replace("/", "-");}
 <div page-model="@Model?.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
-page-class-selected="btn-primary" page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo" 
+page-class-selected="btn-primary" page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo"
 class="btn-group pull-right m-1"></div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

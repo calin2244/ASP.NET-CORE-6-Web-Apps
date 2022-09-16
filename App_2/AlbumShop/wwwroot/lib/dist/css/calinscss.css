@@ -152,8 +152,9 @@ img {
 .modal-header {
     padding:9px 15px;
     border-bottom:3px solid black;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
+    /* TODO: FIX THIS ERRORS */
+    /* -webkit-border-top-left-radius: 5px; */
+    /* -webkit-border-top-right-radius: 5px; */
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
 }
@@ -218,38 +219,45 @@ box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 box-shadow:1px 1px 20px #d2d2d2;
 }
 
-.card-custom-wide {
+.card-custom-wide{
+    margin-bottom: 60px;
+    border: 2px solid black;
     overflow: hidden;
     border: 0;
+    transform: scale(1);
     width: 100%;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-padding: 14px 80px 18px 36px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12); */
+/* padding: 14px 80px 18px 36px; */
 }
 
 .card-custom-wide-img {
     height: 120px;
     background-color: aqua;
-    border: 3px solid black;
     border-radius: 6px;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     padding: 14px 80px 18px 36px;
+    height: 110px;
     /* background: linear-gradient(-45deg, #ffec61, #f321d7); */
 }
 
 .blur-img{
     background-image: url('https://edailybuzz.com/wp-content/uploads/2019/04/55837776_2177387922572933_6966676189814663548_n-1069x822.jpg');
     background-repeat: no-repeat;
-    background-size: cover;;
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
+    background-size: cover;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
     border: none;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .div-over-blur-img{
@@ -258,21 +266,43 @@ padding: 14px 80px 18px 36px;
     margin-bottom: -100px;
 }
 
+.div-over-blur-img-txt{
+    border-bottom: 2px white solid;
+    padding-bottom: 2px;
+}
+
 /* First left setting is a fallback */
 .card-custom-wide .card-custom-avatar img {
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
     position: absolute;
     top: 20px;
-    left: 43.3%;
-    left: calc(50% - 75px);
-    width: 150px;
-    height: 150px;
+    left: calc(90% - 75px);
+    width: 120px;
+    height: 120px;
 }
 
 .card-custom-wide:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+@keyframes increase_card_size{
+    from{
+        transform: scale(1.0);
+    }  
+    to{
+        transform: scale(1.05);
+    }
+}
+
+.my-card-body{
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.my-card-footer{
+    margin-top: 5px;
 }
 
 .card-header-style{
@@ -282,10 +312,25 @@ padding: 14px 80px 18px 36px;
     color: white;
     font-family: 'Bebas';
     font-weight: bold;
-    font-size: 40px;
+    font-size: 34px;
+    height: 20%;
     text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-.thumbnail-image{
-    position: absolute; left: 810px
+.navbar-link{
+    position: relative;
+    left: 12px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover{
+    color: #E2C4F5;
+    text-decoration: none;
+}
+
+.modal-sizes{
+    height: 600px;
+    width: 800px;
 }

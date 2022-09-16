@@ -1,0 +1,140 @@
+@model Album
+
+<div class="modal fade" id="exampleModal-@Model?.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-@Model?.Id" aria-hidden="true" style="color: black">
+          <div class="modal-dialog modal-lg" role="document">
+               <div class="modal-content modal-sizes">
+                    <div class="modal-header" style="background-color: transparent">
+                         <h5 class="modal-title" id="exampleModalLabel-@Model?.Id" style="font-weight: bold; color: white">
+                              <span>
+                                   🌸@Model?.AlbumName, @Model?.ArtistName🌸
+                              </span>
+                         </h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="modal-body">   
+                         <section style="float: right; border: 3px solid black; border-radius: 14px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                        <img src="@Model?.CoverLink" style="border-radius: 12px"/>
+                                        <span style="position: relative; top: -15px;">                                           
+                                             <div style="text-align: center">
+                                                  <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">Add to cart</button>
+                                             </div>
+                                        </span> 
+                         </section>  
+                         <iframe class="spotifyEmbedLink" src="@Model?.SpotifyEmbed" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                         
+                         Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
+                    Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
+                         
+                    </div>
+                    <div class="modal-footer" style="background-color: transparent; margin-top: 25px">
+                         <span style="position: relative; float: left; font-weight: bold; color: white; left: 75px">
+                              @Model?.RecordLabel
+                         </span>
+                         <span style="position: relative; left: -690px">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 2px solid black">Close</button>
+                         </span>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="card card-custom-wide" style="border: none">
+     <div class="card-custom-wide-img blur-img" style="background-image: url('@Model?.CoverLink');"></div>
+     <div class="card-custom-wide-img card-header-style div-over-blur-img">
+          <span class="div-over-blur-img-txt">
+               @Model?.AlbumName
+          </span>
+          <span style="position: relative; left: 12px">
+                         <button type="button" class="btn bg-white" data-toggle="modal" data-target="#exampleModal-@Model?.Id">
+                              More info
+                         </button>
+                         <div class="modal fade" id="exampleModal-@Model?.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-@Model?.Id" aria-hidden="true" style="color: black">
+                              <div class="modal-dialog modal-lg" role="document">
+                                   <div class="modal-content">
+                                        <div class="modal-header" style="background-color: transparent">
+                                             <h5 class="modal-title" id="exampleModalLabel-@Model?.Id" style="font-weight: bold; color: white">
+                                                  <span>
+                                                       🌸@Model?.AlbumName, @Model?.ArtistName🌸
+                                                  </span>
+                                             </h5>
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                             </button>
+                                        </div>
+                                        <div class="modal-body">   
+                                             <section style="float: right; border: 3px solid black; border-radius: 14px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                                            <img src="@Model?.CoverLink" style="border-radius: 12px"/>
+                                                            <span style="position: relative; top: -15px;">                                           
+                                                                 <div style="text-align: center">
+                                                                      <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">Add to cart</button>
+                                                                 </div>
+                                                            </span> 
+                                             </section>  
+                                             <iframe class="spotifyEmbedLink" src="@Model?.SpotifyEmbed" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                             
+                                             Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
+                                        Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
+                                             
+                                        </div>
+                                        <div class="modal-footer" style="background-color; margin-top: 25px">
+                                             <span style="position: relative; float: left; font-weight: bold; color: white; left: 75px">
+                                                  @Model?.RecordLabel
+                                             </span>
+                                             <span style="position: relative; left: -690px">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 2px solid black">Close</button>
+                                             </span>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </span>
+               </div>
+     <div class="card-custom-avatar" style="margin-bottom: 10px;">
+               <img class="img-fluid img-thumbnail thumbnail-image" src="@Model?.CoverLink" alt="Avatar" />
+          </div>
+     <div class="card-body my-card-body">
+          <h4 class="card-title">@Model?.AlbumName by @Model?.ArtistName</h4>
+          <p class="card-text">Genre: @Model?.Genre</p>
+          <p class="card-text">@Model?.Description</p>
+     </div>
+     <form id="@Model?.Id" asp-page="/Cart" method="post">
+          <input type="hidden" asp-for="Id"/>
+          <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+          <div class="card-footer my-card-footer">
+               <span class="card-text p-1">
+                    <span class="btn btn-warning" style="float: left">
+                         Rating: @Model?.Rating
+                    </span>
+                    <button type="submit" class="btn btn-success" style="float: right">
+                         Add to cart
+                         <span class="badge badge-primary" style="font-size: 14px">
+                              @Model?.Price.ToString("c")
+                         </span>
+                    </button>
+               </span>
+          </div>
+     </form>
+</div>
+
+@Model.Price
+
+<button id="Button1" type="submit" value="Button 1" onclick="IncrementCount()">PRESS</button>
+
+
+<script>
+function IncrementCount() {
+    $.ajax({
+        type: "POST",
+        url: '@Url.Action("IncrementCount", "Home")',    
+        async: true,
+        success: function (msg) {
+            return "it worked!";
+        },
+        error: function () {
+            return "error";
+        }
+    });
+}
+</script>

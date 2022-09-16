@@ -1,0 +1,202 @@
+@model AlbumsListViewModel
+@using System.Globalization
+
+<header class="section-header">
+     <div class="section-title title-with-separator">
+          <h1 class="title">Welcome to Calin's Album Shop!</h1>
+     </div>
+     <span class="sub-title">Sending pictures of Vinyls, CDS and everything music related to your e-mail!</span>
+</header>
+
+
+@foreach (var a in Model?.Albums ?? Enumerable.Empty<Album>()){
+     <partial name="AlbumSummary" model="a"></partial>
+}
+
+<!--<h2>Our available Albums:</h2>-->
+<br/>
+@{var modalIndex = "0"; long Id = 0;}
+
+@*
+@foreach (var album in Model?.Albums ?? Enumerable.Empty<Album>())
+{    
+     var cardColor = String.Empty;
+     IDictionary<string, string> genreColors = new Dictionary<string, string>();
+
+     switch(@album.Genre){
+          case "Hip-Hop/Rap":
+               cardColor = "card text-white bg-maroon mb-3";
+               genreColors.Add("Hip-Hop/Rap", "#811349");
+               break;
+          case "Alternative/Indie":
+               cardColor = "card text-white bg-indigo mb-3";
+               genreColors.Add("Alternative/Indie", "#6511EB");
+               break;
+          case "Country Music/Pop":
+               cardColor = "card text-white bg-indigo mb-3";
+               genreColors.Add("Country Music/Pop", "#6511EB");
+               break;
+          case "Pop/Punk":
+               cardColor = "card text-white bg-teal mb-3";
+               genreColors.Add("Pop/Punk", "#20c997");
+               break;
+          default:
+               cardColor = "card text-white bg-dark mb-3";
+               genreColors.Add("R&B/Soul", "#32383E");
+               genreColors.Add("Hip-Hop/Pop/Punk", "#32383E");
+               break;
+     }
+*@
+     @* !MODAL STYLE *@ 
+     @*
+     <div class="modal fade" id="exampleModal-@modalIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-@modalIndex" aria-hidden="true" style="color: black">
+          <div class="modal-dialog modal-lg" role="document">
+               <div class="modal-content modal-sizes">
+                    <div class="modal-header" style="background-color: @genreColors[@album.Genre]">
+                         <h5 class="modal-title" id="exampleModalLabel-@modalIndex" style="font-weight: bold; color: white">
+                              <span>
+                                   🌸@album.AlbumName, @album.ArtistName🌸
+                              </span>
+                         </h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="modal-body">   
+                         <section style="float: right; border: 3px solid black; border-radius: 14px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                        <img src="@album.CoverLink" style="border-radius: 12px"/>
+                                        <span style="position: relative; top: -15px;">                                           
+                                             <div style="text-align: center">
+                                                  <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">Add to cart</button>
+                                             </div>
+                                        </span> 
+                         </section>  
+                         <iframe class="spotifyEmbedLink" src="@album.SpotifyEmbed" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                         
+                         Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
+                    Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
+                         
+                    </div>
+                    <div class="modal-footer" style="background-color: @genreColors[@album.Genre]; margin-top: 25px">
+                         <span style="position: relative; float: left; font-weight: bold; color: white; left: 75px">
+                              @album.RecordLabel
+                         </span>
+                         <span style="position: relative; left: -690px">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 2px solid black">Close</button>
+                         </span>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="card card-custom-wide" style="border: none">
+     <div class="card-custom-wide-img blur-img" style="background-image: url('@album.CoverLink');"></div>
+     <div class="card-custom-wide-img card-header-style div-over-blur-img">
+          <span class="div-over-blur-img-txt">
+               @album.AlbumName
+          </span>
+          <span style="position: relative; left: 12px">
+                         <button type="button" class="btn bg-white" data-toggle="modal" data-target="#exampleModal-@modalIndex">
+                              More info
+                         </button>
+                         <div class="modal fade" id="exampleModal-@modalIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-@modalIndex" aria-hidden="true" style="color: black">
+                              <div class="modal-dialog modal-lg" role="document">
+                                   <div class="modal-content">
+                                        <div class="modal-header" style="background-color: @genreColors[@album.Genre]">
+                                             <h5 class="modal-title" id="exampleModalLabel-@modalIndex" style="font-weight: bold; color: white">
+                                                  <span>
+                                                       🌸@album.AlbumName, @album.ArtistName🌸
+                                                  </span>
+                                             </h5>
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                             </button>
+                                        </div>
+                                        <div class="modal-body">   
+                                             <section style="float: right; border: 3px solid black; border-radius: 14px; position absolute; margin-left: 100px; margin-bottom: 75px" class="portrait">
+                                                            <img src="@album.CoverLink" style="border-radius: 12px"/>
+                                                            <span style="position: relative; top: -15px;">                                           
+                                                                 <div style="text-align: center">
+                                                                      <button type="button" class="btn btn-success" style="border-radius: 4px; border: 2px solid black">Add to cart</button>
+                                                                 </div>
+                                                            </span> 
+                                             </section>  
+                                             <iframe class="spotifyEmbedLink" src="@album.SpotifyEmbed" width="45%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                                             
+                                             Today marks the release of Aries' debut project, WELCOME HOME, and from its very opening moments, it is immediately apparent why the enigmatic artist is currently gracing the cover of Spotify's Anti-Pop playlist (a spot previously held by America's favorite boyband, BROCKHAMPTON). In his debut album, Aries does more than simply make his way through nine phenomenal tracks, each more striking than the last – he infuses each step forward with an expanse of influences, inspirations, and artistic fervor.
+                                        Attempting to classify Aries and WELCOME HOME in many ways feels like a fool's errand. 
+                                             
+                                        </div>
+                                        <div class="modal-footer" style="background-color: @genreColors[@album.Genre]; margin-top: 25px">
+                                             <span style="position: relative; float: left; font-weight: bold; color: white; left: 75px">
+                                                  @album.RecordLabel
+                                             </span>
+                                             <span style="position: relative; left: -690px">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 2px solid black">Close</button>
+                                             </span>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </span>
+     </div>
+          <div class="card-custom-avatar" style="margin-bottom: 10px;">
+               <img class="img-fluid img-thumbnail thumbnail-image" src="@album.CoverLink" alt="Avatar" />
+          </div>
+     <div class="card-body">
+          <h4 class="card-title">@album.AlbumName by @album.ArtistName</h4>
+          <p class="card-text">Genre: @album.Genre</p>
+          <p class="card-text">@album.Description</p>
+     </div>
+     <form id="@album.Id" asp-page="/Cart" method="post">
+          <input asp-for="@album.Id"/>
+          <input name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+          <span class="card-text p-1">
+               <button type="submit" style="float: right">
+                    Add to cart
+               </button>
+          </span>
+     </form>
+</div>
+
+     Id++;
+     modalIndex = modalIndex+1;
+}*@
+
+@*
+<div class="card-section card-section-third border rounded" style="margin-top: 100px; margin-bottom: 100px">
+     <div class="card-header card-header-third rounded">
+          <h2 class="card-header-title mb-3 text-white">Placeholder</h2>
+     </div>
+     <div class="card-body text-center mb-2">
+               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat malesuada, volutpat fermentum eu ac faucibus pellentesque torquent nullam gravida et, ut nam massa purus congue class mi nunc.</p>
+               <hr>
+          <span><a href="#"><i class="fab fa-bluetooth rounded-circle" aria-hidden="true"></i></a></span>
+          <span><a href="#"><i class="fas fa-wifi rounded-circle" aria-hidden="true"></i></a></span>
+          <span><a href="#"><i class="fas fa-plug rounded-circle" aria-hidden="true"></i></a></span>
+     </div>
+</div>
+
+<div class="card card-custom-wide" style="border: none"> 
+     <div class="card-custom-wide-img blur-img"></div>
+     <div class="card-custom-wide-img card-header-style div-over-blur-img">
+          <span class="div-over-blur-img-txt">
+               Album Name by Artist
+          </span>
+
+     </div>
+          <div class="card-custom-avatar">
+               <img class="img-fluid img-thumbnail thumbnail-image" src="https://edailybuzz.com/wp-content/uploads/2019/04/55837776_2177387922572933_6966676189814663548_n-1069x822.jpg" alt="Avatar" />
+          </div>
+     <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Aries Aries AriesAriesAriesAriesAriesAriesAriesAriesAriesAriesAries</p>
+          <p class="card-text">Some example text. Lorem ipsum dolor sit amet, te vix omittam fastidii, enim paulo omnes ea has, illud luptatum no qui. Sed ea qualisque urbanitas, purto elit nec te. Possim inermis antiopam ut eum. Eos te zril labore laboramus, quem erant nam in. Ut sed molestie antiopam. At altera facilisis mel.</p>
+     </div>
+</div> *@
+
+@{Model?.CurrentGenre?.Replace("/", "-");}
+<div page-model="@Model?.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" 
+page-class-selected="btn-primary" page-class-normal="btn-outline-dark" page-class-selected="btn-primary bg-indigo"
+class="btn-group pull-right m-1"></div>
+

@@ -15,12 +15,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\GitHub Repos\ASP.NET-CORE-6-Web-Apps\App_2\AlbumShop
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Pages/_CartLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0NhcnRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Shared/AlbumSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFsYnVtU3VtbWFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/GitHub Repos/ASP.NET-CORE-6-Web-Apps/App_2/AlbumShop/Views/Shared/Components/NavigationMenu/Default.cshtml]
