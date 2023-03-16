@@ -1,3 +1,13 @@
+<div id = "header" align = "center">
+  <img src = "https://avatars.githubusercontent.com/u/95591065?v=4" width = 90/>
+  <div id="badges">
+  <a href="https://www.linkedin.com/in/calin-basturea-349a15234/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  </div>
+</div>
+
+
 22nd of August 2022
 
 Added modals with info about the cover album and a spotify embed link. TO ADD: An actual review of the album, social media links for the artist?? CORRECT SPELLING MISTAKES!!!
